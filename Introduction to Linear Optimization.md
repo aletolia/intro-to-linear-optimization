@@ -318,20 +318,31 @@ DEC 必须做出两个截然不同的决定：是否使用有关磁盘驱动器�
 
 <img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210721012651386.png" alt="image-20210721012651386" style="zoom:50%;" />
 
-请注意，如果 x 和 y 是 lRn 中的向量，并且 A 范围在 [0 , 1] ' 中，那么形式为 AX + (1 - A)y 的点属于连接 x 和 y 的线段。 凸函数的定义是指 f 的值，因为它的参数跟踪这个段。 如果 f 是线性的，则定义的 (a) 部分中的不等式将成立。 因此，不等式意味着当我们将注意力限制在这样的段 上时，函数的图形不高于相应的线性函数的图形； 见图1。  1（一）。
-   很容易看出，当且仅当函数 f 是凹函数 f 是凸函数。 请注意，形式为 f(x) = ao + I: 􀁅=l aixi 的函数，其中 ao, .  .  .  , an 是标量，称为仿射函数，既是凸函数又是凹函数。  （事实证明，仿射函数是唯一既是凸函数又是凹函数。）凸函数（以及凹函数）在优化中起着核心作用。
-   我们说向量 x 是 f 的局部最小值，如果 f(x) :::;  f(y) 对于 x 附近的所有 y。 我们也说 x 是全局最小值如果 f(x) :::;  f(y) 对于所有 y 。 一个凸函数不能有局部极小而不是全局极小（见图1.1），这个性质对设计高效的优化算法有很大帮助。
-   让 Cl , .  .  .  , Cm 是 lRn 中的向量，令 d1 , .  .  .  , dm 为标量，并考虑函数 f : lRn I--t lR 定义为
+请注意，如果 $x$ 和 $y$ 是 $\mathfrak{R}^n$ 中的向量，并且 $\lambda$ 范围在 $[0 , 1]$  中，那么形式为 $\lambda x + (1 - \lambda)y$ 的点属于连接 $x$ 和 $y$ 的线段。 凸函数的定义是指 $f$ 的值，因为它的参数跟踪这个段。 如果 $f$ 是线性的，则定义的 (a) 部分中的不等式将成立。 因此，不等式意味着当我们将注意力限制在这样的段上时，函数的图形将不高于相应的线性函数的图形； 见图1.1（a）
 
+<img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210721093556396.png" alt="image-20210721093556396" style="zoom:50%;" />
 
+很容易看出，函数 $f$ 是凸函数当且仅当 $-f$ 是凸函数。 请注意，形式为 $f(x) = a_o + \Sigma_{i=1}^n a_ix_i$ 的函数（其中 $a_0, .  .  .  , a_n$ 是标量），称为仿射函数，既是凸函数又是凹函数。  （事实证明，仿射函数是唯一既是凸函数又是凹函数的函数。）凸函数（以及凹函数）在优化中起着核心作用。
 
+我们说，如果对于 $x$ 附近的 $y$ 都存在 $f(x) \le  f(y)$ ，则称向量 $x$ 是 $f$ 的局部最小值；同理，如果对于定义域内的任意 $y$ ，都有 $f(x)\le f(y)$ 则称向量 $x$ 是 $f(x)$ 的全局最小值。一个凸函数的局部极小值必然是其全局最小值（见图1.1），这个性质对设计高效的优化算法有很大帮助。
 
+记 $c_1 , .  .  .  , c_m$ 是 $\mathfrak{R}_n$ 中的向量，令 $d_1 , .  .  .  , d_m$ 为标量，并考虑函数 $f : \mathfrak{R}_n \mapsto \mathfrak{R}$ ，定义为
 
+<img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210721094642374.png" alt="image-20210721094642374" style="zoom:50%;" />
 
+我们说这样的函数必然是凹函数，因为
 
+<img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210721100237303.png" alt="image-20210721100237303" style="zoom:50%;" />
 
+<img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210721100327044.png" alt="image-20210721100327044" style="zoom:50%;" />
 
+函数形式为 $max_{i=1,...,m}(c'_ix+d_i)$ 的函数称为分段线性凸函数。一个简单的例子是由$f（x）=|x |=max\{x，-x\} $定义的绝对值函数。如图1.2（b）所示，分段线性凸函数可以用来逼近一般凸函数。
 
+<img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210721101200104.png" alt="image-20210721101200104" style="zoom:50%;" />
+
+现在我们考虑线性规划的一个推广，其中目标函数是分段线性和凸的而不是线性的：
+
+<img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210721101219432.png" alt="image-20210721101219432" style="zoom:50%;" />
 
 
 
